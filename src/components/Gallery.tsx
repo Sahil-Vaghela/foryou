@@ -13,11 +13,11 @@ import img5 from "../assets/img5.jpeg"
 export const Gallery = ({ onNext, onBack }: PageProps) => {
   const [index, setIndex] = useState(0);
   const images = [
-    { url: img0, caption: "Our first coffee together ☕" },
-    { url: img1, caption: "That sunset walk we'll never forget 🌅" },
-    { url: img2, caption: "Late night talks that felt like minutes 🌙" },
-    { url: img3, caption: "Just us, being perfectly ourselves 💙" },
-    { url: img4, caption: "The little things that mean the most ✨" },
+    { url: img0, caption: "Walking beside you, holding your arm, feels like holding my whole world." },
+    { url: img1, caption: "That sunset walk we'll never forget " },
+    { url: img2, caption: "Late night talks that felt like minutes " },
+    { url: img3, caption: "Just us, being perfectly ourselves " },
+    { url: img4, caption: "The little things that mean the most " },
     { url: img5, caption: "Forever starts with this one month ❤️" }
   ];
 
@@ -35,7 +35,7 @@ export const Gallery = ({ onNext, onBack }: PageProps) => {
       exit={{ opacity: 0 }}
       className="min-h-[100dvh] w-full flex flex-col items-center justify-center px-6 py-20 max-w-4xl mx-auto overflow-y-auto"
     >
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center mb-10 md:mb-12">Captured Moments</h2>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center mb-10 md:mb-12">Wait and watch all images</h2>
       
       <div className="relative w-full aspect-[4/5] md:aspect-video rounded-3xl overflow-hidden glass-card shadow-2xl">
         <AnimatePresence mode="wait">
@@ -72,6 +72,7 @@ export const Gallery = ({ onNext, onBack }: PageProps) => {
 
         {/* Progress Dots */}
         <div className="absolute top-6 right-6 flex gap-2 z-10">
+          
           {images.map((_, i) => (
             <div 
               key={i}

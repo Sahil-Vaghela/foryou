@@ -9,7 +9,7 @@ export const RevealMessages = ({ onNext, onBack }: PageProps) => {
   const messages = [
     { btn: "Tap this 💙", text: "I like talking to you" },
     { btn: "One more thing…", text: "You make my day better" },
-    { btn: "Last one…", text: "I think I’m falling for you ❤️" }
+    { btn: "Last one…", text: "I’m falling for you ❤️" }
   ];
 
   const toggle = (i: number) => {

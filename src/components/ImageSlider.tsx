@@ -79,6 +79,7 @@ export const ImageSlider = ({ onNext, onBack }: PageProps) => {
         </AnimatePresence>
         
         <div className="flex gap-4 mt-8 md:mt-12">
+          
           <button onClick={() => setIndex((i) => (i - 1 + slides.length) % slides.length)} className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
           </button>
@@ -86,6 +87,7 @@ export const ImageSlider = ({ onNext, onBack }: PageProps) => {
             <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
           </button>
         </div>
+       <h1> First Use this buttons than pink color button</h1>
 
         <div className="mt-12 md:mt-16">
           <Navigation onNext={onNext} onBack={onBack} />
