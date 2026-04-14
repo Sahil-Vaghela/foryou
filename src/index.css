@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-cursive: "Dancing Script", cursive;
+}
+
+:root {
+  --color-romantic-pink: #ff85a2;
+  --color-romantic-blue: #85a2ff;
+}
+
+body {
+  @apply bg-[#050505] text-white overflow-x-hidden;
+  font-family: var(--font-sans);
+}
+
+.romantic-gradient {
+  background: radial-gradient(circle at 50% 50%, #1a0b1a 0%, #050505 100%);
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+.heart-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 50;
+  animation: float linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
